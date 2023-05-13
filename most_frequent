@@ -1,0 +1,24 @@
+# Define the function most_frequent
+def most_frequent(string):
+    # Create an empty dictionary to store the frequency of each character
+    freq_dict = {}
+
+    # Iterate over each character in the string
+    for char in string:
+        # If the character is already in the dictionary, increment its count by 1
+        if char in freq_dict:
+            freq_dict[char] += 1
+        # If the character is not in the dictionary, add it with a count of 1
+        else:
+            freq_dict[char] = 1
+
+    # Sort the dictionary by value in descending order and create a list of tuples
+    sorted_freq = sorted(freq_dict.items(), key=lambda x: x[1], reverse=True)
+
+    # Print the characters in decreasing order of frequency
+    print("Characters in decreasing order of frequency:")
+    for item in sorted_freq:
+        print(f"{item[0]} : {item[1]}")
+
+# Call the function with a sample string
+most_frequent("mississippi")
