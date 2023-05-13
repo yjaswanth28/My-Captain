@@ -1,0 +1,18 @@
+# Define a function to generate the Fibonacci numbers
+def fibonacci(n):
+    # Initialize the first two numbers in the sequence
+    fib = [0, 1]
+
+    # Generate the next n-2 numbers in the sequence and append them to the list
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+
+    # Return the list of Fibonacci numbers
+    return fib
+
+# Accept the number of Fibonacci numbers to generate from the user
+n = int(input("Enter the number of Fibonacci numbers to generate: "))
+
+# Generate the Fibonacci numbers and print them
+fib = fibonacci(n)
+print(f"The first {n} Fibonacci numbers are: {fib}")
