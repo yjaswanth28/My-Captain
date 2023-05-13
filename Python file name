@@ -1,0 +1,7 @@
+filename = input("Enter a filename: ")
+dot_pos = filename.rfind(".")
+if dot_pos == -1 or dot_pos == 0 or dot_pos == len(filename) - 1:
+    print("Invalid filename")
+else:
+    extension = filename[dot_pos+1:]
+    print(f"The extension of the file '{filename}' is '{extension}'")
