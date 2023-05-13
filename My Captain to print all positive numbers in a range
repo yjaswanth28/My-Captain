@@ -1,0 +1,22 @@
+# Define a function to print all positive numbers in a list
+def positive_numbers(lst):
+    # Create an empty list to store the positive numbers
+    positive_lst = []
+
+    # Iterate over each element in the list
+    for num in lst:
+        # Check if the element is positive
+        if num > 0:
+            # If it is, add it to the positive list
+            positive_lst.append(num)
+
+    # Return the list of positive numbers
+    return positive_lst
+
+# Define the input lists
+list1 = [12, -7, 5, 64, -14]
+list2 = [12, 14, -95, 3]
+
+# Print the positive numbers in each list
+print(f"Positive numbers in list1: {positive_numbers(list1)}")
+print(f"Positive numbers in list2: {positive_numbers(list2)}")
